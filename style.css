@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --background: #dae9e9;
+  --foreground: #284b54;
+  --card: #ffffff;
+  --card-foreground: #333333;
+  --popover: #ffffff;
+  --popover-foreground: #333333;
+  --primary: #333333;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #333333;
+  --muted: #e9f9f9;
+  --muted-foreground: #3B707D;
+  --accent: #65A9A6;
+  --accent-foreground: #333333;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #c4b9d9;
+  --input: #cccccc;
+  --ring: #333333;
+  --radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+.sidebar {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: var(--card);
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  border-right: 2px solid var(--border);
+  z-index: 1000;
+}
+
+.sidebar-toggle:checked~.sidebar {
+  left: 0;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-toggle-label {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1001;
+  cursor: pointer;
+  padding: 5px 10px 0px;
+  border-radius: var(--radius);
+  background-color: var(--background);
+  transition: all 0.3s ease;
+}
+
+.sidebar-toggle:checked~.sidebar-toggle-label {
+  left: 200px;
+}
+
+.sidebar-toggle-label .close {
+  display: none;
+}
+
+.sidebar-toggle:checked~.sidebar-toggle-label .open {
+  display: none;
+}
+
+.sidebar-toggle:checked~.sidebar-toggle-label .close {
+  display: inline;
+}
+
+.sidebar-toggle-label:hover {
+  background-color: var(--muted);
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--foreground);
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding: 16px 0;
+}
+
+.sidebar-menu li {
+  padding: 8px 24px;
+}
+
+.sidebar-menu li:hover {
+  background-color: var(--accent);
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a {
+  color: var(--foreground);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sidebar-menu a img {
+  margin-right: 12px;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+p {
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.content-wrapper {
+  background-color: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

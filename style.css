@@ -157,3 +157,84 @@ p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
   0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+.drips {
+  position: absolute;
+  max-width: 800px;
+  height: 100%;
+}
+
+.drip-1 {
+  position: absolute;
+  width: 100px;
+  height: 330px;
+  background-color: var(--accent);
+  top: 0px;
+  z-index: -1;
+  border-radius: 0 0 50px 50px;
+}
+
+.drip-2 {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background-color: var(--foreground);
+  top: 0;
+  left: 60px;
+  z-index: -2;
+  border-radius: 0 0 130px 130px;
+}
+
+.drip-3 {
+  position: absolute;
+  width: 70px;
+  height: 450px;
+  background-color: var(--accent);
+  left: 230px;
+  z-index: -1;
+  border-radius: 0 0 50px 50px;
+}
+
+.drip-4 {
+  position: absolute;
+  width: 70px;
+  height: 330px;
+  background-color: var(--foreground);
+  top: 0;
+  left: 690px;
+  z-index: 1;
+  border-radius: 0 0 50px 50px;
+}
+
+.drip-5 {
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  background-color: var(--muted-foreground);
+  top: 0px;
+  left: 280px;
+  z-index: -1;
+  border-radius: 0 0 50px 50px;
+}
+
+.drip-6 {
+  position: absolute;
+  width: 260px;
+  height: 360px;
+  background-color: var(--accent);
+  top: 0;
+  left: 300px;
+  z-index: -3;
+  border-radius: 0 0 130px 130px;
+}
+
+.drip-7 {
+  position: absolute;
+  width: 260px;
+  height: 210px;
+  background-color: var(--muted-foreground);
+  top: 0px;
+  left: 460px;
+  z-index: -1;
+  border-radius: 0 0 130px 130px;
+}
